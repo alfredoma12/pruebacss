@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sockmyfeed</title>
+  <link rel="stylesheet" href="assets\style.css">
+</head>
+<body>
+  <div class="grid-container">
+    <aside class="sidebar">
+      <div class="brand">
+       
+        <h2>Sockmyfeed</h2>
+      </div>
+      <nav class="nav">
+        <a href="#">Inicio</a>
+        <a href="#ofertas">Ofertas</a>  
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+        <div class="hamburger-menu">
+    <span class="hamburger-icon" onclick="toggleMenu()">☰</span>
+  <span class="hamburger-title"></span>
+  <span>Sockmyfeed</span>
+   </div>
+
+   <div class="mobile-nav" id="mobileNav">
+  <a href="#">Inicio </a>
+  <a href="#ofertas">Ofertas</a>
+  <a href="#contacto"> Contacto</a>
+</div>
+
+      <div class="top-bar">
+        <label for="ordenar">Ordenar Por:</label>
+        <select id="ordenar">
+          <option>Precio</option>
+          <option>Nombre</option>
+        </select>
+      </div>
+
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="assets\img\calcetin1.png" alt="calcetin1">
+          <p>Modelo: calcetin1</p>
+          <button>Ver más</button>
+        </div>
+
+        <div class="product-card">
+          <img src="assets\img\calcetin2.png" alt="calcetin2">
+          <p>Model: calcetin2</p>
+          <button>Ver más</button>
+        </div>
+
+        <div class="product-card">
+          <img src="assets\img\calcetin3.png" alt="calcetin3">
+          <p>Model: calcetin3</p>
+          <button>Ver más</button>
+        </div>
+
+        <div class="product-card">
+          <img src="assets\img\calcetin4.png" alt="calcetin4">
+          <p>Model: calcetin4</p>
+          <button>Ver más</button>
+        </div>
+
+        <div class="product-card">
+          <img src="assets\img\calcetin5.png" alt="calcetin5">
+          <p>Model: calcetin5</p>
+          <button>Ver más</button>
+        </div>
+
+        <div class="product-card">
+          <img src="assets\img\calcetin6.png" alt="calcetin6">
+          <p>Model: calcetin6 </p>
+          <button>Ver más</button>
+        </div>
+
+        <div class="product-card">
+          <img src="assets\img\calcetin7.png" alt="calcetin 7">
+          <p>Model: calcetin7</p>
+          <button>Ver más</button>
+        </div>
+      </div>
+
+      <div class="pagination">
+        <button>&lt;</button>
+        <button class="active">1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>&gt;</button>
+      </div>
+     
+      <section id="ofertas" class="ofertas-section">
+  <h2>Ofertas Especiales</h2>
+  <div class="ofertas-grid">
+    <div class="oferta-card">
+      <img src="assets\img\calcetin1.png" alt="Producto en oferta">
+      <h4>Calcetin1</h4>
+      <p><del>$4.000</del> <strong>$3.400</strong></p>
+    </div>
+    <div class="oferta-card">
+      <img src="assets\img\calcetin2.png" alt="Producto en oferta">
+      <h4>calcetin2</h4>
+      <p><del>$5.000</del> <strong>$4.700</strong></p>
+    </div>
+  </div>
+</section>
+
+      <section id="contacto" class="contact-section">
+  <h2>Contáctanos</h2>
+  <form class="contact-form">
+    <input type="text" placeholder="Tu nombre" required>
+    <input type="email" placeholder="Tu correo" required>
+    <textarea placeholder="Tu mensaje" rows="5" required></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+
+    </main>
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById("mobileNav");
+    nav.style.display = (nav.style.display === "flex") ? "none" : "flex";
+  }
+</script>
+  </div>
+  <div class="footer">
+        <p>Todos los derechos<br>reservados</p>
+        <p>Numero de telefono:+56930201020</p>
+        <p>Email: asdasd@gmail.com</p>
+         <div class="social-icons">
+      <a href="https://www.facebook.com/"><img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook"></a>
+      <a href="https://www.instagram.com/"><img src="https://cdn-icons-png.flaticon.com/24/733/733558.png" alt="Instagram"></a>
+      </div>
+
+</body>
+</html>

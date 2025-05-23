@@ -1,0 +1,265 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-areas: "sidebar main";
+  min-height: 100vh;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #fa20b5;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.brand {
+  text-align: center;
+}
+
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+}
+
+
+
+.main-content {
+  grid-area: main;
+  padding: 20px;
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-bar {
+  background-color: #ddd;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  align-items: center;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.product-card {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 15px;
+  text-align: center;
+}
+
+.product-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+}
+
+.product-card button {
+  background-color: #fa20b5;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.pagination button {
+  border: 1px solid #ccc;
+  background-color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.pagination .active {
+  background-color: #fa20b5;
+  color: white;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main";
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fa20b5;
+    color: white;
+    padding: 10px 20px;
+  }
+
+  .hamburger-icon {
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .main-content {
+    padding: 10px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card img {
+    height: 100px;
+  }
+
+}
+
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  background-color: #fa20b5;
+  padding: 10px;
+}
+
+.mobile-nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+@media (min-width: 769px) {
+  .mobile-nav {
+    display: none !important;
+  }
+}
+
+.product-card img {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.product-card img:hover {
+  filter: grayscale(0%);
+}
+
+.contact-section {
+  padding: 40px 20px;
+  background-color: #f6f6f6;
+  text-align: center;
+}
+
+.contact-section h2 {
+  color: #fa20b5;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.contact-form button {
+  background-color: #fa20b5;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.contact-form button:hover {
+  background-color: #fa20b5;
+}
+
+.ofertas-section {
+  padding: 40px 20px;
+  background-color: #e0f0ff;
+  text-align: center;
+}
+
+.ofertas-section h2 {
+  color: #fa20b5;
+  margin-bottom: 20px;
+}
+
+.ofertas-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.oferta-card {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 15px;
+  width: 200px;
+  text-align: center;
+}
+
+.oferta-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+}
+
+.oferta-card del {
+  color: gray;
+}
+
+.footer {
+  background-color: #fa20b5;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
